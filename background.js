@@ -42,7 +42,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === value[0] && e.metaKey === metaIncluded && e.shiftKey === shiftIncluded && e.ctrlKey === ctrlIncluded && e.altKey === altIncluded) {
     const title = document.title;
     const url = document.URL;
-    window.navigator.clipboard.writeText(`${title}\n${url}`).then(() => {
+    window.navigator.clipboard.writeText(`[${title}](${url})`).then(() => {
       alert('copied to clipboard');
     }).catch((e) => {
       console.error(e)
