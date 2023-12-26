@@ -3,7 +3,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === "C" && e.ctrlKey) {
     const title = document.title;
     const url = document.URL;
-    window.navigator.clipboard.writeText(`[${title}](${url})`).then(() => {
+    window.navigator.clipboard.writeText(`[${url} ${title}]`).then(() => {
       alert('copied to clipboard');
     }).catch((e) => {
       console.error(e)
